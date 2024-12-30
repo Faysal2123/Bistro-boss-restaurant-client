@@ -23,7 +23,7 @@ const Navbar = () => {
       );
   return (
     <div>
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-base-100 fixed z-10 bg-opacity-30 text-white">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -44,24 +44,26 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-black"
             >
              {NavOptions}
             </ul>
           </div>
           <div className="">
-          <h1 className="text-2xl font-bold">BISTRO BOSS</h1>
-          <h1 className="text-xl font-semibold">Restaurant</h1>
+          <h1 className="lg:text-3xl text-xl font-bold">BISTRO BOSS</h1>
+          <h1 className="lg:text-xl text-lg font-semibold">Restaurant</h1>
           </div>
         </div>
-        <div className="navbar-end hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+       <div className="navbar-end">
+       <div className=" hidden lg:flex">
+          <ul className="menu menu-horizontal px-1 text-base font-semibold">
            {NavOptions}
           </ul>
         </div>
         <div className="">
-          <a className="btn">Login</a>
+          <a className="btn btn-accent">Login</a>
         </div>
+       </div>
       </div>
     </div>
   );
